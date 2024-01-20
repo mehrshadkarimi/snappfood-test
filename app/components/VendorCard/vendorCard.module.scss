@@ -1,0 +1,115 @@
+@import "@styles/variables";
+
+.badge {
+  color: $color-white;
+  background-color: $color-primary;
+  font-size: $text-x-small;
+  font-weight: $font-tiny;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  max-height: 260px;
+  padding: $space-md;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding-top: $space-lg;
+  }
+
+  .firstRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .titleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &:first-child {
+      font-weight: $font-medium;
+      font-size: $text-medium;
+    }
+  }
+  .discountBadge {
+    @extend .badge;
+    gap: 2px;
+    :nth-child(2) {
+      font-size: 11px;
+      font-weight: $font-medium;
+    }
+    margin: 0 4px;
+  }
+
+  .deliveryFee {
+    display: flex;
+    gap: 4px;
+    font-weight: $font-tiny;
+    font-size: $text-small;
+    padding: 2px 0;
+  }
+  .cover {
+    overflow: hidden;
+    border-radius: 6px;
+    background-color: #ddd;
+  }
+  .coverContainer {
+    position: relative;
+    height: 115px;
+    overflow: visible;
+  }
+  .logoContainer {
+    position: absolute;
+    bottom: -10px;
+    right: 8px;
+    width: 54px;
+    height: 54px;
+    overflow: hidden;
+    padding: 2px;
+    background-color: white;
+    border-radius: 50%;
+    box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .logo {
+    border-radius: 50%;
+  }
+  .vote {
+    display: flex;
+    align-items: center;
+    gap: 2;
+    font-size: $text-small;
+    font-weight: $font-bold;
+    i {
+      padding-bottom: 2px;
+    }
+    span {
+      margin-left: $space-sm;
+      color: $color-light-gray;
+      font-weight: $font-medium;
+    }
+  }
+  .pro {
+    @extend .badge;
+    z-index: 100;
+    bottom: -14px;
+    right: 20px;
+    position: absolute;
+    font-weight: $font-bold;
+    font-size: 12px;
+    border-radius: 0 50px 50px 0;
+    padding: 1px;
+    letter-spacing: 1px;
+  }
+}

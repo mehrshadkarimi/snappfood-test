@@ -1,0 +1,33 @@
+@import '@styles/variables.scss';
+
+
+.loader {
+    position: fixed;
+    bottom: 30px;
+    left: calc(50% - 25px);
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    border: 4px dashed $color-primary;
+    border-left-style: solid;
+    border-right-style: solid;
+    animation: rotate-one 1s linear infinite;
+    opacity: 1;
+    z-index: 10;
+}
+
+
+@keyframes rotate-one {
+    0% {
+        transform: rotateX(0) rotateY(0) rotateZ(0deg);
+    }
+
+    50% {
+        opacity: 0.7;
+        box-shadow: 0px 0px 20px 5px $color-primary;
+    }
+
+    100% {
+        transform: rotateX(0) rotateY(0) rotateZ(360deg);
+    }
+}
